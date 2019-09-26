@@ -19,7 +19,6 @@ guesses_it = false
 
 #Начало цикла игры
 while guesses_it == false && num_guesses != 0 do
-
   puts "У Вас осталось #{num_guesses} попыток."
   puts "Введите число от 1 до 10: "
   num_guesses -= 1
@@ -35,10 +34,9 @@ while guesses_it == false && num_guesses != 0 do
     puts "Вы отгадали число с #{10 - num_guesses} попыток"
     guesses_it = true
   end
-
 end
 
 #Если попыток не осталось сообщить загаданное число
 if not guesses_it
-  puts "Извините, попытки закончились, было загадано #{target}"
+  puts "Извините, попытки закончились, было загадано #{target}!"
 end
