@@ -26,9 +26,9 @@ while guesses_it == false && num_guesses != 0 do
 
   #Сравнение введённого числа с загаданным и вывод соответствующего сообщения
   if guess < target && num_guesses != 0
-    puts "Не повезло, число больше"
+    puts "Не повезло, число БОЛЬШЕ"
   elsif guess > target && num_guesses != 0
-    puts "Не повезло, число меньше"
+    puts "Не повезло, число МЕНЬШЕ"
   elsif guess == target
     puts "Урааа!!!"
     puts "Вы отгадали число с #{10 - num_guesses} попыток"
@@ -37,6 +37,6 @@ while guesses_it == false && num_guesses != 0 do
 end
 
 #Если попыток не осталось сообщить загаданное число
-if not guesses_it
-  puts "Извините, попытки закончились, было загадано #{target}!"
+unless guesses_it
+  puts "Извините, попытки закончились! (число #{target})"
 end
