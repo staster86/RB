@@ -13,5 +13,8 @@ target = rand(100) + 1
 
 #Отслеживание количества попыток
 num_guesses = 0
+
 puts "У Вас осталось #{10 - num_guesses} попыток."
-   
+puts "Введите число от 1 до 100: "
+
+guess = gets.to_i
