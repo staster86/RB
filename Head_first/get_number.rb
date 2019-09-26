@@ -7,29 +7,35 @@ input = gets
 name = input.chomp
 puts "Здравствуйте #{name}"
 
-#Сохраниние случайного числа
+#Сохранение случайного числа
 puts "Отгадайте число от 1 до 100"
 target = rand(10) + 1
 
-#Отслеживание количества попыток
-num_guesses = 0
+#попытки
+num_guesses = 10
 
 #Признак продолжения игры
 guesses_it = false
-puts "У Вас осталось #{10 - num_guesses} попыток."
-puts "Введите число от 1 до 10: "
-guess = gets.to_i
 
-#Сравненее введённого числа с загаданным
-# и вывод соответствующего сообщения
-if guess < target
-  puts "Не повезло число больше"
-elsif guess > target
-  puts "Не повезло число меньше"
-elsif guess == target
-  puts "Урааа!!!"
-  puts "Вы отгадали число с #{num_guesses} попыток"
-  guesses_it = true
+#Начало цикла игры
+while guesses_it == false && num_guesses != 0 do
+
+  puts "У Вас осталось #{num_guesses} попыток."
+  puts "Введите число от 1 до 10: "
+  num_guesses -= 1
+  guess = gets.to_i
+
+  #Сравнение введённого числа с загаданным и вывод соответствующего сообщения
+  if guess < target && num_guesses != 0
+    puts "Не повезло, число больше"
+  elsif guess > target && num_guesses != 0
+    puts "Не повезло, число меньше"
+  elsif guess == target
+    puts "Урааа!!!"
+    puts "Вы отгадали число с #{10 - num_guesses} попыток"
+    guesses_it = true
+  end
+
 end
 
 #Если попыток не осталось сообщить загаданное число
