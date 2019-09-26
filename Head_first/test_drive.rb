@@ -13,6 +13,6 @@ def use_headlights (brightness)
   puts "Остерегайтесь оленей!"
 end
 
-puts accelerate
-puts sound_horn
-puts use_headlights ("ближний свет")
+accelerate
+sound_horn
+use_headlights ("ближний свет")
