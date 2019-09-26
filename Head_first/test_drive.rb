@@ -12,3 +12,7 @@ def use_headlights (brightness)
   puts "Включаем свет #{brightness} фары"
   puts "Остерегайтесь оленей!"
 end
+
+puts accelerate
+puts sound_horn
+puts use_headlights ("ближний свет")
