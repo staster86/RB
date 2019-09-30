@@ -8,11 +8,11 @@ def sound_horn
   puts "Beep, Beep!!!"
 end
 
-def use_headlights (brightness)
+def use_headlights (brightness = "ближний свет")
   puts "Включаем свет #{brightness} фары"
   puts "Остерегайтесь оленей!"
 end
 
 accelerate
 sound_horn
-use_headlights ("ближний свет")
+use_headlights
