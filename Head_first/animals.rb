@@ -1,5 +1,5 @@
 #Описание класса птица
-class Bird
+class Animal
 
   attr_reader :name, :age #Определение методов чтения атрибутов name и age
 
@@ -31,24 +31,16 @@ class Bird
 
 end
 
-class Dog
-  def talk(name)
-    puts "#{name} says Bark!"
-  end
+class Dog < Animal
 
-  def move (name, destination)
-    puts "#{name} runs to the #{destination}."
-  end
 end
 
-class Cat
-  def talk(name)
-    puts "#{name} says Meow!"
-  end
+class Cat < Animal
 
-  def move (name, destination)
-    puts "#{name} runs to the #{destination}."
-  end
+end
+
+class Bird < Animal
+
 end
 
 #Создание объектов из класса и использование методов и атрибутов
