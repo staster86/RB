@@ -30,7 +30,7 @@ class Animal
   end
 
 end
-
+ 
 class Dog < Animal
 
 end
