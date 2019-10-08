@@ -1,6 +1,5 @@
 #Описание класса птица
 class Animal
-
   attr_reader :name, :age #Определение методов чтения атрибутов name и age
 
   def name=(value) #Метод записи атрибута для @name
@@ -28,15 +27,18 @@ class Animal
   def report_age
     puts "#{name} is #{age} years old."
   end
-
 end
- 
-class Dog < Animal
 
+class Dog < Animal
+  def talk
+    puts "say Bark! Bark!"
+  end
 end
 
 class Cat < Animal
-
+  def talk
+    puts "say Meow! Meow"
+  end
 end
 
 class Bird < Animal
@@ -50,3 +52,10 @@ kesha.age = 1
 kesha.report_age
 kesha.talk
 kesha.move("tree")
+
+bobik = Dog.new
+bobik.name = "Bobik"
+bobik.age = 3
+bobik.report_age
+bobik.talk
+bobik.move("yard")
