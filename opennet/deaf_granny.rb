@@ -13,5 +13,5 @@ while voice != 'ПОКА ПОКА ПОКА'
   elsif voice == voice.upcase && voice != 'ПОКА ПОКА ПОКА'
     puts "НЕТ, НИ РАЗУ С #{year} ГОДА!"
   end
-
+ 
 end
