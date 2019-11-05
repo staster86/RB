@@ -14,3 +14,4 @@ fourth = STDIN.gets.chomp
 puts "Четвёртый: #{fourth}"
 
 puts first, second, third, fourth
+  
