@@ -1,0 +1,1 @@
+File.open('sample.txt')
