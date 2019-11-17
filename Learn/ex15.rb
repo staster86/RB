@@ -1,6 +1,7 @@
+#Accept argument at startup (ruby ex15.rb test.txt) and assing to the variable filename
 filename = ARGV.first
 
-txt = open('filename')
+txt = open(filename)
 
 puts "Here's your file #{filename}:"
 print txt.read
