@@ -46,12 +46,12 @@ class Bird < Animal
 end
 
 #Создание объектов из класса и использование методов и атрибутов
-kesha = Bird.new
-kesha.name = "Kesha"
-kesha.age = 1
-kesha.report_age
-kesha.talk
-kesha.move("tree")
+kisen = Bird.new
+kisen.name = "Kesha"
+kisen.age = 1
+kisen.report_age
+kisen.talk
+kisen.move("tree")
 
 bobik = Dog.new
 bobik.name = "Bobik"
