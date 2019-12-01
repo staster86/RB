@@ -1,7 +1,6 @@
 class Vehicle #Определение суперкласса
 
-  attr_accessor :odometer
-  attr_accessor :gas_used
+  attr_accessor :odometer, :gas_used
 
   def accelerate
     puts "Floor it!"
@@ -16,6 +15,7 @@ class Vehicle #Определение суперкласса
   end
 
   def mileage #Расход топлива
+    print "Fuel consumption"
     return @odometer / @gas_used
   end
 
@@ -38,7 +38,7 @@ end
 
 class Motorcycle < Vehicle
 
-  def steer #Переопределение метода
+  def steer #Переопределение метода т.к. у мотоцикла только два колеса
     puts "Turn front wheel."
   end
 

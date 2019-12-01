@@ -45,6 +45,12 @@ class Bird < Animal
 
 end
 
+class Armadillo < Animal
+  def move(destination)
+    puts "#{@name} unrolls"
+  end
+end
+
 #Создание объектов из класса и использование методов и атрибутов
 =begin
 kisen = Bird.new
