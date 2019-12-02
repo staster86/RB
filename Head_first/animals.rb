@@ -17,7 +17,7 @@ class Animal
   end
 
   def move(destination)
-    puts "#{name} fly to the #{destination}"
+    puts "#{name} runs to the #{destination}"
   end
 
   def talk
@@ -30,9 +30,15 @@ class Animal
 end
 
 class Dog < Animal
+
+  def to_s #Переопределение метода от супер класса Object
+    puts "#{@name} the dog, age #{@age}"
+  end
+
   def talk
     puts "say Bark! Bark!"
   end
+
 end
 
 class Cat < Animal
@@ -48,22 +54,6 @@ end
 class Armadillo < Animal
   def move(destination)
     puts "#{@name} unrolls"
-  end
+    super #Вызывается родительских метод но параметр
+  end     #передаётся от метода armadillo.move(destination)
 end
-
-#Создание объектов из класса и использование методов и атрибутов
-=begin
-kisen = Bird.new
-kisen.name = "Kesha"
-kisen.age = 1
-kisen.report_age
-kisen.talk
-kisen.move("tree")
-
-bobik = Dog.new
-bobik.name = "Bobik"
-bobik.age = 3
-bobik.report_age
-bobik.talk
-bobik.move("yard")
-=end
