@@ -16,6 +16,12 @@ class Employee
     @salary = salary
   end
 
+  #Вызывается сразу при создании экземпляра
+  def initialize #Метод инициализации переменных экземпляра класса
+    @name = "Anonymous"
+    @salary = 0.0
+  end
+
   def print_pay_stub
     puts "Name: #{@name}"
     pay_for_period = (@salary / 365.0) * 14
