@@ -1,17 +1,23 @@
-class Test
+class Car
 
-  attr_reader :hello
-
-  def talk(content)
-    @hello = content
-    puts "#{@hello}"
+  def initialize(engine)
+    @engine = engine
   end
 
-  attr_writer :say
-
-  def say
-    @say
+  def rev_engine
+    @engine.make_sound
   end
 
+end
+
+class Engine
+
+  def initialize(sound = "Vroom!!")
+    @sound = sound
+  end
+
+  def make_sound
+    puts @sound
+  end
 
 end
