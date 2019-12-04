@@ -61,15 +61,15 @@ class HourlyEmployee < Employee
   attr_reader :hourly_wage, :hours_per_week
 
   # Параметры по умолчанию при вызове HourlyEmployee.security_guard
-  def self.security_guard(name)
+  def self.security_guard(name) # Охраник
     HourlyEmployee.new(name, 19.25, 30)
   end
 
-  def self.cashier(name)
+  def self.cashier(name) # Кассир
     HourlyEmployee.new(name, 12.75, 25)
   end
 
-  def self.janitor(name)
+  def self.janitor(name) # Уборщик
     HourlyEmployee.new(name, 10.50, 20)
   end
 
