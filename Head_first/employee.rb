@@ -14,7 +14,7 @@ class Employee
   end
 
   def print_name
-    puts "Name: #{name}" # Тоже самое что self.name
+    puts "Name: #{name}" # Тоже самое что #{self.name}
   end
 
 end
@@ -51,8 +51,10 @@ end
 
 # Почасовая оплата труда
 class HourlyEmployee < Employee
+
   # Почасовая зарплата, часов в неделю
   attr_reader :hourly_wage, :hours_per_week
+
   # Параметры по умолчанию при создании HourlyEmployee.security_guard
   def self.security_guard(name)
     HourlyEmployee.new(name, 19.25, 30)
