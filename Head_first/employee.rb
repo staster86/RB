@@ -1,11 +1,13 @@
 class Employee
 
-  attr_reader :name
+  attr_reader :name # атрибут к чтению переменной @name
 
+  # Инициализация переменной name (Employee.new("Names"))
   def initialize(name = "Anonymous")
     self.name = name # Метод self вызывает метод name именно этого экземпляра
-  end
-
+  end                # созданного из супер класса
+                     # далее он проходит проверку на пустое значение
+  # Запись параметра в @name, если он прошёл проверку
   def name=(name)
     if name == ""
       raise "Name can't be blank!"
@@ -13,6 +15,7 @@ class Employee
     @name = name
   end
 
+  # Распечатывает имя
   def print_name
     puts "Name: #{name}" # Тоже самое что #{self.name}
   end
@@ -31,12 +34,14 @@ class SalaryEmployee < Employee
     @salary = salary
   end
 
-  # Вызывается сразу при создании экземпляра
-  # Передача параметров при создании
-  # Если методу не переданны параметры то подставляются умолчания
-  # Метод инициализации переменных экземпляра класса
+=begin
+  Метод инициализации переменных экземпляра класса,
+  Вызывается сразу при создании экземпляра(SalaryEmployee.new)
+  Передача параметров при создании(SalaryEmployee.new("Names", 9999.99))
+  Если методу не переданны параметры то подставляются умолчания
+=end
   def initialize(name = "Anonimous", salary = 0.0)
-    super(name)
+    super(name) # Вызываем метод name супер класса
     self.salary = salary
   end
 
@@ -55,7 +60,7 @@ class HourlyEmployee < Employee
   # Почасовая зарплата, часов в неделю
   attr_reader :hourly_wage, :hours_per_week
 
-  # Параметры по умолчанию при создании HourlyEmployee.security_guard
+  # Параметры по умолчанию при вызове HourlyEmployee.security_guard
   def self.security_guard(name)
     HourlyEmployee.new(name, 19.25, 30)
   end
