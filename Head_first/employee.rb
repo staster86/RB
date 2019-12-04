@@ -53,6 +53,18 @@ end
 class HourlyEmployee < Employee
   # Почасовая зарплата, часов в неделю
   attr_reader :hourly_wage, :hours_per_week
+  # Параметры по умолчанию при создании HourlyEmployee.security_guard
+  def self.security_guard(name)
+    HourlyEmployee.new(name, 19.25, 30)
+  end
+
+  def self.cashier(name)
+    HourlyEmployee.new(name, 12.75, 25)
+  end
+
+  def self.janitor(name)
+    HourlyEmployee.new(name, 10.50, 20)
+  end
 
   def hourly_wage=(hourly_wage)
     if hourly_wage < 0.0
