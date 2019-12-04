@@ -1,23 +1,21 @@
-class Car
+class Boat
 
-  def initialize(engine)
-    @engine = engine
+  def initialize(name)
+    @name = name
   end
 
-  def rev_engine
-    @engine.make_sound
+  def info
+    puts "Name: #{@name}"
+    puts "Motor type: #{@motor_type}"
   end
 
 end
 
-class Engine
+class PowerBoat < Boat
 
-  def initialize(sound = "Vroom!!")
-    @sound = sound
-  end
-
-  def make_sound
-    puts @sound
+  def initialize(name, motor_type)
+    super(name)
+    @motor_type = motor_type
   end
 
 end
