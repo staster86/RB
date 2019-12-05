@@ -1,17 +1,15 @@
-=begin
-def yield_number
-  yield 4
+lines = []
+
+File.open("review.txt") do |review_file|
+  lines = review_file.readlines
 end
 
-array = [1, 2, 3]
+relevant_lines = []
 
-yield_number { |number| array << number }
+lines.each do |line|
+  if line.include?("Truncated")
+    relevant_lines << line
+  end
+end
 
-p array
-=end
-
-sum = 0
-
-[1, 2, 3].each {|number| sum += number }
-
-puts sum
+puts relevant_lines
