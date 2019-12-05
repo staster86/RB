@@ -1,21 +1,10 @@
-class Boat
-
-  def initialize(name)
-    @name = name
-  end
-
+def my_method
+  puts "We're in the method, about to invoke your block!"
+  yield("Hello", "World!")
+  puts "We're back in the method!"
 end
 
-class PowerBoat < Boat
-
-  def initialize(name, motor_type)
-    super(name)
-    @motor_type = motor_type
-  end
-
-  def info
-    puts "Name: #{@name}"
-    puts "Motor type: #{@motor_type}"
-  end
-
+my_method do |param1, param2|
+  puts "We're in block!"
+  puts param1, param2
 end
