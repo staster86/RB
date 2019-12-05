@@ -6,5 +6,9 @@ end
 
 my_method do |param1, param2|
   puts "We're in block!"
-  puts param1, param2
+  puts "Param1: #{param1}, param2: #{param2}"
+end
+
+my_method do |param1|
+  puts param1
 end
