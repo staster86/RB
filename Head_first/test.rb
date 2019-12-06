@@ -1,9 +1,8 @@
-lines = []
-
-File.open("review.txt") do |review_file|
-  lines = review_file.readlines
+def make_casserole(ingredients)
+  puts "Preheat oven to 375 degrees"
+  puts "Place #{ingredients} in dish"
+  puts "Bake for 20 minutes"
 end
 
-relevant_lines = lines.find_all { |line| line.include?("Truncated") }
-
-puts relevant_lines
+make_casserole "rice, broccoli, and chicken"
+make_casserole "noodles, celery, and tuna"
