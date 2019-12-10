@@ -6,10 +6,11 @@
 # 4. Удаление без возможности восстановить
 # 5. Поиск по списку
 
-def open_file # Открытие файла и закрытие с передачей всего содержимого в массив
-  @file = []
-  File.open("todo.txt") do |line|
-    @file = line.readlines
+# Открытие файла и закрытие с передачей всего содержимого в массив
+def open_file
+  File.open("todo.txt", "w") do |line|
+    lines = line.readlines
+    puts "#{lines}"
   end
 end
 
@@ -19,29 +20,33 @@ def view # Просмотр содержимого файла и вывод на
     buf = line
     str = buf.split(";")
     str.each do |item|
-      puts "#{line_num}. " + item
+      str_print = "#{line_num}. " + item
+      puts str_print
       line_num += 1
     end
   end
 end
 
 def add(content) # Добавление задания в список
-  @file << content + ";"
-  @file_add = @file
+  open_file
+  @file << content + ";" + "\n"
 end
 
-def save
-  File.open("todo.txt", "w") do |line|
-    line << @file_add.join
+def delete(number)
+  del_attr = number - 1
+  buf_arr = []
+  @file.each do |line|
+    buf = line
+    str = buf.split(";")
+    str.each do |item|
+      buf_arr.push(item)
+    end
+  puts "Are your sure? (y/n)"
+  choice = gets.chomp.capitalize
+    if choice == "Y"
+      buf_arr.delete_at(del_attr)
+    end
   end
-end
-
-def arhive
-
-end
-
-def delete
-
 end
 
 def find
