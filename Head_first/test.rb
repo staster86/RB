@@ -1,6 +1,8 @@
-def volume(options)
-  result = (options[:width] * options[:height] * options[:depth])
-  puts "Volume is  #{result}"
+def create(options = {})
+  puts "Creating #{options[:database]} for owner #{options[:user]}..."
 end
 
-volume(width: 10, height: 5, depth: 2.5)
+def connect(database:, host: "localhost", port: 3306, user: "root")
+  puts "Connecting to #{database} on #{host} port #{port} as #{user}..."
+end
+

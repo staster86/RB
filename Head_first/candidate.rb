@@ -9,7 +9,7 @@ class Candidate
   end
 end
 
-=begin
+
 def print_summary(candidate)
   puts "Candidate: #{candidate.name}"
   puts "Age: #{candidate.age}"
@@ -17,4 +17,4 @@ def print_summary(candidate)
   puts "Hobby: #{candidate.hobby}"
   puts "Birthplace #{candidate.birthplace}"
 end
-=end
+
