@@ -14,4 +14,4 @@ bodies = Hash.new do |hash, key| # = {}, 'Something'
 end
 
 bodies['Mars'] # {'Mars' => #<CelestiaBody:0x000000000553d4c8 @type="planet">}
-bodies['Mars'].name = 'Mars' #{"Mars"=>#<CelestiaBody:0x000000000553d4c8 @type="planet", @name="Mars">}
+bodies['Mars'].name = 'Mars' # {"Mars"=>#<CelestiaBody:0x000000000553d4c8 @type="planet", @name="Mars">}
