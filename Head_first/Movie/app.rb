@@ -1,5 +1,6 @@
 require 'sinatra'
 require 'movie'
+require 'yaml'
 
 get('/') do
   'Hello!'
