@@ -4,12 +4,15 @@
   <title>My ToDo List</title>
 </head>
 <body>
-  <h1>My Task</h1>
-  <ul>
+  <h1 align="center">My Task</h1>
+  <table align="center" border="1">
     <% @works.each do |work,| %>
-      <li><a href="/delete/<%= work.id %>"><%= work.content %></a></li>
+    <tr>
+      <th><h4 align="left"> <%= work.content %> </h4></th>
+      <th><h4 align="right"><a href="/delete/<%= work.id %>"> удалить </a></h4></th>
+    </tr>
     <% end %>
-  </ul>
+  </table>
 <h4 align="center"><a href="/">Back to Home!</a></h4>
 </body>
 </html>

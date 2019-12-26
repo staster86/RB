@@ -25,6 +25,7 @@ get( '/view') do
   erb :view
 end
 
-get('/delete/:state') do
-  erb :delete
+get('/delete/:id') do
+  @works = store.del(params['id'])
+  redirect '/view'
 end

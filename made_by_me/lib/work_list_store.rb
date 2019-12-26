@@ -22,4 +22,12 @@ class WorkListStore
     end
   end
 
+  def del(id)
+    @store.transaction do
+      if id == @store.roots
+        @store.delete(id)
+      end
+    end
+  end
+
 end
