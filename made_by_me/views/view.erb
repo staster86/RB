@@ -1,0 +1,15 @@
+<html>
+<head>
+  <meta charset="UTF-8"/>
+  <title>My ToDo List</title>
+</head>
+<body>
+  <h1>My Task</h1>
+  <ul>
+    <% @works.each do |work,| %>
+      <li><a href="/delete/<%= work.id %>"><%= work.content %></a></li>
+    <% end %>
+  </ul>
+<h4 align="center"><a href="/">Back to Home!</a></h4>
+</body>
+</html>
