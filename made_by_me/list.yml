@@ -1,0 +1,16 @@
+---
+1: !ruby/object:WorkList
+  content: Хочу зарабатывать программированием! 30-40т для начала пойдёт
+  id: 1
+2: !ruby/object:WorkList
+  content: Работать по 4 часа в день для начала
+  id: 2
+4: !ruby/object:WorkList
+  content: Кирюша хулиганчик
+  id: 4
+5: !ruby/object:WorkList
+  content: Ещё одно задание, встретить новый год
+  id: 5
+6: !ruby/object:WorkList
+  content: Много много денег
+  id: 6

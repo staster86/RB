@@ -1,0 +1,11 @@
+---
+1: !ruby/object:Movie
+  title: Mens in black
+  director: dsadsadsda
+  year: '2000'
+  id: 1
+2: !ruby/object:Movie
+  title: Star Wars
+  director: Kusi
+  year: '2002'
+  id: 2

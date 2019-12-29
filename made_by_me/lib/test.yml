@@ -1,0 +1,7 @@
+---
+1: !ruby/object:WorkList
+  content: content
+  id: 1
+2: !ruby/object:WorkList
+  content: test
+  id: 2
