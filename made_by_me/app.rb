@@ -26,6 +26,11 @@ get( '/view') do
 end
 
 get('/delete/:id') do
-  @works = store.del(params['id'])
+  id = params['id'].to_i
+  store.del(id)
   redirect '/view'
 end
+
+#Add New Task
+#{1=>#, 2=>#, 4=>#, 5=>#, 6=>#}
+#Back to Home!

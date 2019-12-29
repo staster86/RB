@@ -18,15 +18,13 @@ class WorkListStore
 
   def all
     @store.transaction do
-      @store.roots.map { |id| @store[id]}
+      @store.roots.map { |id| @store[id] }
     end
   end
 
   def del(id)
     @store.transaction do
-      if id == @store.roots
-        @store.delete(id)
-      end
+      @store.delete[id]
     end
   end
 
